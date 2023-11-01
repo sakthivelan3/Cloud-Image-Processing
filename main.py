@@ -1,4 +1,9 @@
 import streamlit as st
+
+# Configure a headless backend for Matplotlib
+import matplotlib
+matplotlib.use('Agg')
+
 import cv2
 import numpy as np
 from streamlit_option_menu import option_menu
