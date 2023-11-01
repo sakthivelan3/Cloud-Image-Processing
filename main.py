@@ -1,9 +1,3 @@
-import subprocess
-
-# Upgrade pip when the Streamlit app starts
-subprocess.run(["/opt/render/project/src/.venv/bin/python", "-m", "pip", "install", "--upgrade", "pip"])
-
-
 import streamlit as st
 import cv2
 import numpy as np
