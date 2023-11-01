@@ -63,7 +63,11 @@ with st.container():
 
                   enhanced_image = Image.fromarray(enhanced_image)
                   # Display the enhanced image
-                  st.image(enhanced_image, use_column_width=True, caption="Enhanced Image")
+                  left_column, right_column = st.columns(2)
+                  with left_column:
+                        st.image(enhanced_image, use_column_width=True, caption="Enhanced Image")
+                  with right_column:
+                        st.empty()
        
             # ****************************** image sharpening *************************
 
@@ -84,7 +88,11 @@ with st.container():
                   sharpened_image=cv2.cvtColor(sharpened_image, cv2.COLOR_BGR2RGB)
 
                   # Display the sharpened image
-                  st.image(sharpened_image, use_column_width=True, caption="Sharpened Image")
+                  left_column, right_column = st.columns(2)
+                  with left_column:
+                        st.image(sharpened_image, use_column_width=True, caption="Sharpened Image")
+                  with right_column:
+                        st.empty()
 
             # ****************************** image saturation *************************
 
@@ -104,8 +112,11 @@ with st.container():
                   adjusted_image = cv2.cvtColor(hsv_image, cv2.COLOR_HSV2RGB)
 
                   # Display the adjusted image
-                  st.image(adjusted_image, use_column_width=True, caption="Adjusted Saturation Image", channels='RGB')
-
+                  left_column, right_column = st.columns(2)
+                  with left_column:
+                        st.image(adjusted_image, use_column_width=True, caption="Adjusted Saturation Image", channels='RGB')
+                  with right_column:
+                        st.empty()
 
             # Image smoothing
             if st.button("Image Smooth"):
@@ -115,8 +126,11 @@ with st.container():
                   smoothened_image = cv2.cvtColor(simple_average_image, cv2.COLOR_BGR2RGB)
 
                   #Displaying smooothned image 
-                  st.image(smoothened_image,use_column_width=True, caption="Smoothened Image", channels='RGB')
-
+                  left_column, right_column = st.columns(2)
+                  with left_column:
+                        st.image(smoothened_image,use_column_width=True, caption="Smoothened Image", channels='RGB')
+                  with right_column:
+                        st.empty()
 
       # ---------- What We Provide ------
 
