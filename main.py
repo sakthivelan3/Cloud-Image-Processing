@@ -166,8 +166,4 @@ with st.container():
                   st.markdown(contact_form, unsafe_allow_html=True)
             with right_column:
                   st.empty()
-
-      st.write(st.__version__)
-      st.write(np.__version__)
-      st.write(cv2.__version__)
       
