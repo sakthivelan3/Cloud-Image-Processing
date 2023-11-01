@@ -1,4 +1,5 @@
 import streamlit as st
+
 import cv2
 import numpy as np
 from streamlit_option_menu import option_menu
@@ -62,7 +63,7 @@ with st.container():
 
                   enhanced_image = Image.fromarray(enhanced_image)
                   # Display the enhanced image
-                  st.image(enhanced_image, use_column_width=False, caption="Enhanced Image")
+                  st.image(enhanced_image, use_column_width=True, caption="Enhanced Image")
        
             # ****************************** image sharpening *************************
 
@@ -83,7 +84,7 @@ with st.container():
                   sharpened_image=cv2.cvtColor(sharpened_image, cv2.COLOR_BGR2RGB)
 
                   # Display the sharpened image
-                  st.image(sharpened_image, use_column_width=False, caption="Sharpened Image")
+                  st.image(sharpened_image, use_column_width=True, caption="Sharpened Image")
 
             # ****************************** image saturation *************************
 
@@ -103,7 +104,7 @@ with st.container():
                   adjusted_image = cv2.cvtColor(hsv_image, cv2.COLOR_HSV2RGB)
 
                   # Display the adjusted image
-                  st.image(adjusted_image, use_column_width=False, caption="Adjusted Saturation Image", channels='RGB')
+                  st.image(adjusted_image, use_column_width=True, caption="Adjusted Saturation Image", channels='RGB')
 
 
             # Image smoothing
@@ -114,7 +115,7 @@ with st.container():
                   smoothened_image = cv2.cvtColor(simple_average_image, cv2.COLOR_BGR2RGB)
 
                   #Displaying smooothned image 
-                  st.image(smoothened_image,use_column_width=False, caption="Smoothened Image", channels='RGB')
+                  st.image(smoothened_image,use_column_width=True, caption="Smoothened Image", channels='RGB')
 
 
       # ---------- What We Provide ------
