@@ -7,6 +7,10 @@ streamlit_option_menu==0.3.6
 
 
 pandas<1.2.0
+
 plotly==4.14.3
-tensorflow==2.9.1
+
+tensorflow==2.7.0
+
 protobuf<3.20,>=3.9.2
+
