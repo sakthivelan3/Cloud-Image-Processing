@@ -42,8 +42,11 @@ with st.container():
       if uploaded_image is not None:
       
             # Display the uploaded image
-            st.image(uploaded_image, use_column_width=True, caption="Original Image")
-            
+            left_column, right_column = st.columns(2)
+            with left_column: 
+                  st.image(uploaded_image, use_column_width=True, caption="Original Image")
+            with rigth_column:
+                  st.empty()
             # Perform color image enhancement on the uploaded image
             if st.button("Enhance Image"):
                   # Read and process the uploaded image
